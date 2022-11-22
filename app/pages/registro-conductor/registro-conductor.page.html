@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login-conductor" text="Regresar" color="primary" mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro Conductor</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup] = "formularioRegistro" (keyup.enter)="CrearConductor()">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input  type="email" placeholder="Email"
+           formControlName="correo"
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirma Password</ion-label>
+          <ion-input type="password" formControlName="confirmaPass"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Marca del vehiculo</ion-label>
+          <ion-input type="text" formControlName="marcaauto"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Modelo del Vehiculo</ion-label>
+          <ion-input type="text" formControlName="modeloauto"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="CrearConductor()" expand="block" fill="outline" shape="round" routerLink="/login-conductor">
+          Registrarse
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

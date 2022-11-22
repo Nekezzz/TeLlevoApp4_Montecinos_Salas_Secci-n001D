@@ -1,0 +1,53 @@
+<ion-header >
+  
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-title color="warning">INICIO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="colorcito">
+
+
+    <img src="assets/logo.jpg" width="500" height="300" class="ion-padding">
+    
+    <ion-col>
+      <div class="ion-text-center">
+        <h3>Grupo Especializado</h3>
+        <h3>En La Creacion De Apps</h3>
+      </div>
+    </ion-col>
+ 
+
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title>¿Quienes Somos?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="parrafo">
+        Somos un equipo que nos especializamos en la construccion de apps he implementacion de herramientas digitales.
+     </p>
+     <p class="parrafo">
+      Nuestra empresa tiene más de 10 años de antiguedad trabajando para nuestros clientes. Estamos ubicados en 
+      Londres avenida brasil #1044.
+     </p>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button (click)= "Logout()">Salir
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

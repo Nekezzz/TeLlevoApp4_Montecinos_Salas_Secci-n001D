@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-item class="pad" color="secondary" >
+    <ion-toolbar color="secondary">
+      <ion-buttons  slot="start">
+        <ion-back-button 
+          defaultHref="/rest-contrasena"
+          text="Volver"
+          color="light"
+          mode="ios"></ion-back-button>
+      </ion-buttons>
+
+        <ion-title color="warning" class="titulo">Verificación</ion-title>
+      
+    </ion-toolbar>
+  </ion-item>
+  </ion-header>
+
+  
+  <ion-content class="colorcito">
+    <br><br><br><br><br>
+  <form #formulario="ngForm" (ngSubmit) = "onSubmit()">
+      
+        <ion-item class="colorcito2">
+
+          <ion-label>Codigo: </ion-label>
+          <ion-input  type="email" placeholder="Ingrese Codigo"
+                      name="email" [(ngModel)] ="usuario.email"
+                      pattern="^([0-9]{6})$" required>
+          </ion-input>
+          <ion-button shape="round" color="danger" (click)="presentAlert2()" >?</ion-button>
+
+        </ion-item>
+
+        <br><br><br><br><br>
+        <ion-button color="secondary" routerLink="/inicio" [disabled] = "formulario.invalid"
+                  type="submit" expand ="block">
+                  ¡LISTO!         
+          </ion-button>
+  </form>
+  
+
+</ion-content>

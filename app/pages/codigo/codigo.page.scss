@@ -1,0 +1,18 @@
+.colorcito {
+    --background: var(--ion-color-micolor); // Replace this with color of your choice
+}
+
+.colorcito2 {
+    color: rgb(0, 0, 0);
+    --background: rgb(255, 255, 255);
+    
+    --padding-start: 13px!important;
+    
+
+    width: 410px!important;
+    font-size: 0.95em;
+    
+    border-radius: 2px solid #000000 !important;
+    border: 5px solid #000000 !important;
+    
+    }
